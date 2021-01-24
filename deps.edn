@@ -1,0 +1,4 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        clj-time/clj-time {:mvn/version "0.15.2"}
+        scicloj/clojisr {:mvn/version "1.0.0-BETA16"}}}
