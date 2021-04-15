@@ -50,7 +50,8 @@
      (->> r
           line-seq
           rest ; remove header
-          (sequence (comp (map #(str/split % #"\t"))
+          (sequence (comp (remove #(str/starts-with? % "#"))
+                          (map #(str/split % #"\t"))
                           (map (partial apply parse))
                           (map (fn [m] (assoc m :over-m (over-m m params))))))
           working-hours
